@@ -13,5 +13,14 @@
     margin-right: 20px;
 }
 .logo__container-nav span{
-    margin-right: 20px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+.logo__container-github{
+    margin: 0 10px;
+    cursor: pointer;
+}
+a{
+    text-decoration: none;
+    color: black;
 }

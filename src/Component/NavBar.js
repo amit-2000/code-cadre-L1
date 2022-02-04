@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import "./Navbar.css";
 import { Link } from "react-router-dom";
+// import GitHubIcon from "@mui/icons-material/GitHub";
+// import GitHubIcon from "@material-ui/icons/GitHub";
 const NavBar = ({ profile, setProfile }) => {
   const token = localStorage.getItem("user");
   const [isLoggedin, setIsloggedin] = useState(true);
@@ -17,11 +19,26 @@ const NavBar = ({ profile, setProfile }) => {
           <nav className="logo__container-nav">
             {/* <img src={profile.logo} alt="logo" /> */}
             <span>{profile.user_name}</span>
+            {/* <GitHubIcon /> */}
+            <a
+              href="https://github.com/amit-2000/code-cadre-L1"
+              className="logo__container-github"
+            >
+              GitHub
+            </a>
             <span onClick={handleRemove}>Logout</span>
           </nav>
         </div>
       ) : (
-        <Link to="/login">Login</Link>
+        <nav className="logo__container-nav">
+          <a
+            href="https://github.com/amit-2000/code-cadre-L1"
+            className="logo__container-github"
+          >
+            GitHub
+          </a>
+          <Link to="/login">Login</Link>
+        </nav>
       )}
     </div>
   );
