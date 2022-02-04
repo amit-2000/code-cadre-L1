@@ -15,7 +15,7 @@ const NavBar = ({ profile, setProfile }) => {
       {token ? (
         <div>
           <nav className="logo__container-nav">
-            <img src={profile.logo} alt="logo" />
+            {/* <img src={profile.logo} alt="logo" /> */}
             <span>{profile.user_name}</span>
             <span onClick={handleRemove}>Logout</span>
           </nav>

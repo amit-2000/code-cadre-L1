@@ -9,7 +9,8 @@ const Login = ({ profile, setProfile }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setProfile({ user_name: name, logo: "Logo" });
+    const newName = name + " 😄";
+    setProfile({ user_name: newName, logo: "Logo" });
     localStorage.setItem("user", true);
     console.log("handle submit called");
   };
@@ -51,7 +52,11 @@ const Login = ({ profile, setProfile }) => {
           {/* <RemoveRedEyeIcon className="login__showPassword__eye" /> */}
           show password
         </p>
-        <input className="form__container-submit" type="submit" value="Submit" />
+        <input
+          className="form__container-submit"
+          type="submit"
+          value="Submit"
+        />
       </form>
     </div>
   );
