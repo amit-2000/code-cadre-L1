@@ -1,0 +1,31 @@
+.form__container{
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+.form__container-flex{
+    display: flex;
+    flex-direction: column;
+}
+.form__container-label{
+    margin-top: 10px ;
+    cursor: pointer;
+}
+.form__container-label input{
+    margin-left: 20px;
+}
+.form__container-submit{
+    padding: 10px;
+    cursor: pointer;
+}
+.login__showPassword{
+    cursor: pointer;
+}
+@media (max-width:600px) {
+    .form__container{
+        width: 90%;
+        padding: 10px;
+    }
+    
+}

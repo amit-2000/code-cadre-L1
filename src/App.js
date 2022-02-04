@@ -1,23 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
-
+import React, { useState } from "react";
+import "./App.css";
+import { Login, Header } from "./Component/index";
+import NavBar from "./Component/NavBar";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 function App() {
+  const [profile, setProfile] = useState({ user_name: "", logo: "" });
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Router>
+        <NavBar profile={profile} setProfile={setProfile} />
+        <Routes>
+          <Route path="/" element={<Header />} />
+          <Route
+            path="/login"
+            element={<Login profile={profile} setProfile={setProfile} />}
+          ></Route>
+        </Routes>
+      </Router>
     </div>
   );
 }

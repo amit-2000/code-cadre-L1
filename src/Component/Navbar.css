@@ -1,0 +1,17 @@
+.logo__container{
+    background-color:rgb(162, 216, 36);
+    color: rgb(15, 10, 10);
+    /* width: 100%; */
+    padding: 20px;
+}
+
+.logo__container-nav{
+    text-align: right;
+    margin-right:  50px; 
+}
+.logo__container-nav img{
+    margin-right: 20px;
+}
+.logo__container-nav span{
+    margin-right: 20px;
+}

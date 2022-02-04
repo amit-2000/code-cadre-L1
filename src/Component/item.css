@@ -1,0 +1,21 @@
+.item__container{
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 30px;
+    padding: 10px;
+    /* color: white; */
+    /* background-color: black; */
+}
+.item__container-title{
+    text-align: center;
+}
+.item__container-link{
+    text-align: center;
+}
+
+@media (max-width:600px) {
+    .item__container{
+        width: 90%;
+        text-align: justify;
+    }
+}
